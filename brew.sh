@@ -1,60 +1,65 @@
 #!/usr/bin/env bash
 
-# Install command-line tools using Homebrew.
+# Install command-line tools for xcode
+xcode-select --install
+
+# Install Homebrew
+
+if test ! $(which brew); then
+  e_header "Installing Homebrew......"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	e_success "🍻 Home brew installed successfully..!"
+else
+  e_warning "Homebrew is already installed. Skipping.."
+fi
+
+#  Check home brew is working fine
+e_header "Check homebrew is installed fine..."
+
+brew doctor
 
 # Make sure we’re using the latest Homebrew.
+e_header "Update Homebrew to make sure we're using the latest version..."
+
 brew update
 
+e_success "🍻 Update Homebrew version is done...!"
+
 # Upgrade any already-installed formulae.
+e_header "Upgrade any already installed formulae..."
+
 brew upgrade
 
+e_success "🍻 Upgrade formulae(s) is done...!"
+
 # Install `wget` with IRI support.
-brew install wget --with-iri
+e_header "Installing Homebrew formulaes are started....."
 
-# Install brew important packages
-brew install vim --with-override-system-vi
-brew install tree
-brew install grep
-brew install git
-brew install openssh
-brew install openssl
-brew install mongodb
+for app in "wget --with-iri"\
+	"coreutils" \
+	"vim --with-override-system-vi" \
+	"tree" \
+	"grep" \
+	"openssh" \
+	"openssl" \
+	"mongodb" \
+	"mcrypt" \
+	"ssh-copy-id" \
+	"go" \
+	"node"\
+	"ansible" \
+	"awscli" \
+	"kubernetes-cli" \
+	"heroku/brew/heroku" \
+	"youtube-dl" \
+	"http-server"; do
+	brew install "${app}"
+done
 
-# Install Deployment based application
-brew install ansible
-brew install awscli
-brew install kubernetes-cli
-
-#Install brew MISC
-
-brew install youtube-dl
-
-# Setup NativeScript
-
-sudo gem install xcodeproj
-
-sudo gem install cocoapods
-
-pod setup
-
-pip install six
-
-# Install Java8
-brew tap caskroom/versions
-
-brew cask install java8
-
-# Set the JAVA_HOME system environment variable.
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-
-#Install the Android SDK.
-brew cask install android-sdk
-
-# Set the ANDROID_HOME system environment variable.
-export ANDROID_HOME=/usr/local/share/android-sdk
-
-$ANDROID_HOME/tools/bin/sdkmanager "tools" "platform-tools" "platforms;android-25" "build-tools;27.0.3" "extras;android;m2repository" "extras;google;m2repository"
-
+e_success "🍻 Brew formulae(s) installation is done..!"
 
 # Remove outdated versions from the cellar.
+e_header "Check for outdated brew formulae(s) to clear..."
 brew cleanup
+
+e_success "🍻 Brew cleanup is done..!"
