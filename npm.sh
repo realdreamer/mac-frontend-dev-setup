@@ -2,7 +2,7 @@
 
 # Check npm installed or not
 
-for app in "npm"
+for app in "npm" \
 	"yarn" \
 	"yo" \
 	"eslint" \
@@ -18,7 +18,6 @@ for app in "npm"
 	"now" \
 	"netlify-cli" \
 	"firebase-tools" \
-	"heroku" \
-	"nativescript"; do
+	"heroku"; do
 	npm i -g "${app}"
 done

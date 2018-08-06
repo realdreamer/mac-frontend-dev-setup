@@ -18,27 +18,30 @@ Setup your OS X machine for development at ease....."
 
 e_header "Start setting up custom OSX configuration";
 
-source ./brew.sh
+source brew.sh
 
-source ./gitconfig.sh
+source gitconfig.sh
 
-source ./terminal.sh
+source nvm.sh
 
-source ./nvm.sh
+source npm.sh
 
-source ./npm.sh
+source applications.sh
 
-source ./applications.sh
+source vscode_packages.sh
 
-source ./vscode_packages.sh
+source chrome.sh
 
-source ./chrome.sh
+source nativescript.sh
 
-source ./nativescript.sh
+source powerline_fonts.sh
 
-source ./powerline_fonts.sh
+source osx.sh
 
-source ./osx.sh
+source gh-ssh-keygen.sh
+
+source terminal.sh
+
 
 e_thanks "Author: Mohamed Ismail -> https://github.com/realdreamer \n"
 

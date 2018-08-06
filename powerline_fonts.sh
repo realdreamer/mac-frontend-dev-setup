@@ -9,5 +9,4 @@ cd fonts
 
 # clean-up a bit
 cd ..
-
 rm -rf fonts

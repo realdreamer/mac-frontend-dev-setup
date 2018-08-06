@@ -1,6 +1,7 @@
 ###############################################################################
 # Google Chrome & Google Chrome Canary                                        #
 ###############################################################################
+source helper/utils.sh 
 e_header "Starting Google chrome and chrome canary configuration changes..."
 
 # Allow installing user scripts via GitHub Gist or Userscripts.org

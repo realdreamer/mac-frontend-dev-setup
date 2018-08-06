@@ -4,11 +4,13 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
+brew tap homebrew/cask
+brew tap homebrew/cask-versions
+
 for app in "google-chrome" \
 	"google-chrome-canary" \
 	"firefox" \
 	"firefox-nightly" \
-	"firefox-esr" \
 	"safari-technology-preview" \
 	"visual-studio-code-insiders" \
 	"iterm2" \

@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
+source helper/utils.sh 
+
 e_header "Installing VS code packages......"
 
 # Install Icons packages
 for app in "robertohuertasm.vscode-icons" \
-	# Install Keyboard Mapping
 	"ms-vscode.sublime-keybindings" \
-	# Install helpers
 	"2gua.rainbow-brackets" \
 	"WallabyJs.quokka-vscode" \
 	"ritwickdey.liveserver" \
@@ -24,11 +24,9 @@ for app in "robertohuertasm.vscode-icons" \
 	"Zignd.html-css-class-completion" \
 	"Shan.code-settings-sync" \
 	"esbenp.prettier-vscode" \
-	# Install Linting
 	"dbaeumer.vscode-eslint" \
 	"eg2.tslint" \
 	"glen-84.sass-lint" \
-	# Install Syntax format support
 	"mikestead.dotenv" \
 	"ms-vscode.go" \
 	"kumar-harsh.graphql-for-vscode" \
@@ -40,16 +38,13 @@ for app in "robertohuertasm.vscode-icons" \
 	"dzannotti.vscode-babel-coloring" \
 	"robinbentley.sass-indented" \
 	"freebroccolo.reasonml" \
-	# Install Theming
 	"naumovs.theme-oceanicnext" \
 	"ms-vscode.Theme-TomorrowKit" \
 	"sdras.night-owl" \
 	"ms-vscode.theme-materialkit" \
 	"gerane.theme-flatlandmonokai" \
 	"wesbos.theme-cobalt2" \
-	# Install Editor Config
 	"EditorConfig.editorconfig" \
-	#Install NPM
 	"eg2.vscode-npm-script" \
 	"christian-kohler.npm-intellisense"; do
 	code-insiders --install-extension "${app}"

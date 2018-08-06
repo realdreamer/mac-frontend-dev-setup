@@ -35,9 +35,13 @@ e_success "🍻 Upgrade formulae(s) is done...!"
 # Install `wget` with IRI support.
 e_header "Installing Homebrew formulaes are started....."
 
-for app in "wget --with-iri"\
-	"coreutils" \
-	"vim --with-override-system-vi" \
+#Installing wget
+brew install wget --with-iri
+
+# Installing vim with override
+brew install vim --with-override-system-vi
+
+for app in "coreutils" \
 	"tree" \
 	"grep" \
 	"openssh" \

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source ./helper/utils.sh
+
 e_header "NativeScript setup is starting....."
 
 # Setup NativeScript
@@ -27,5 +29,9 @@ brew cask install android-sdk
 export ANDROID_HOME=/usr/local/share/android-sdk
 
 $ANDROID_HOME/tools/bin/sdkmanager "tools" "platform-tools" "platforms;android-25" "build-tools;27.0.3" "extras;android;m2repository" "extras;google;m2repository"
+
+npm i -g nativescript
+
+export PATH=$PATH:~/.npm-packages/bin
 
 e_success "🍻 NativeScript packages installation is done...!"

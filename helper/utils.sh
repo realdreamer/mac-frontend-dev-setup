@@ -18,16 +18,16 @@ blue=$(tput setaf 38)
 # Headers and  Logging
 #
 
-e_header() { 
+e_header() {
   printf "\n${bold}${purple}==========  %s  ==========${reset}\n" "$@"
 }
-e_arrow() { 
+e_arrow() {
   printf "➜ $@\n"
 }
-e_success() { 
+e_success() {
   printf "${green}✔ %s${reset}\n" "$@"
 }
-e_error() { 
+e_error() {
   printf "${red}✖ %s${reset}\n" "$@"
 }
 e_warning() {
@@ -42,6 +42,11 @@ e_bold() {
 e_note() {
   printf "${underline}${bold}${blue}Note:${reset}  ${blue}%s${reset}\n" "$@"
 }
+
+ask() {
+  printf "\n${bold}$@${reset}"
+}
+
 
 #
 # USAGE FOR SEEKING CONFIRMATION
@@ -74,6 +79,33 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
   return 0
 fi
 return 1
+}
+
+## To check input is empty or not
+is_empty() {
+if [ $# -eq  0 ]
+  then
+    return 1
+fi
+  return 0
+}
+
+## To check programs exit or not
+is_exists() {
+if [ $(type -P $1) ]; then
+  return 1
+fi
+  return 0
+}
+
+## To check file exits or not
+is_file_exists() {
+if [ -f "$file" ]
+then
+	return 1
+else
+	return 0
+fi
 }
 
 #

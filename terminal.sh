@@ -17,14 +17,12 @@ brew install zsh-syntax-highlighting
 # Install zsh-completeions
 brew install zsh-completions
 
-# Install antigen
-curl -L git.io/antigen > antigen.zsh
+# Install zsh-autosuggestions
+brew install zsh-autosuggestions
 
 # Install Material Design Color Scheme for iterm
 
-# Download the iterms colors into Downloads folder
-cd Downloads
+# Download the iterms colors
 
 curl -O https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors
 
-cd ..

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source ./helper/utils.sh
+
 # 1. Git configuration
 
 e_header "Setup git config (global)"
