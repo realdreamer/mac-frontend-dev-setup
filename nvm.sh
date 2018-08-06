@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source helper/utils.sh 
+source helper/utils.sh
 
 if test ! $(which nvm); then
   e_header "Installing zsh-nvm.."

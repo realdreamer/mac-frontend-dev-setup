@@ -190,4 +190,8 @@ function to_install() {
     echo "$v ($(eval echo "\${#$v[*]}")) $(eval echo "\${$v[*]}")"
   done
   echo "${remain[@]}"
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7d9ae378e59cbe61a2654fe7812cdc25daaeefd0

@@ -5,7 +5,6 @@
 1.  youtube-dl
 2.  openssl
 3.  wget
-4.
 
 ## NPM Packages
 
@@ -47,8 +46,5 @@
 5.  vscode
 6.  Node / NVM
 7.  Zeit Now & now cli
-
-// 1. Machine SSH key for Github
-// 2. Machine SSH key for Gitlab
 
 ## Power fonts for console

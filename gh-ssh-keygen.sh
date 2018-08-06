@@ -2,8 +2,6 @@
 
 source ./helper/utils.sh
 
-
-
 ask "${blue} (Option) Enter Your GitHub Email for SSH Key: "
 read -r emailId
 if is_empty $emailId; then

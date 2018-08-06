@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source helper/utils.sh 
+source helper/utils.sh
 
 e_header "Installing VS code packages......"
 
