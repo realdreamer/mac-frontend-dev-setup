@@ -43,6 +43,7 @@ brew install vim --with-override-system-vi
 
 for app in "coreutils" \
 	"tree" \
+	"git"\
 	"grep" \
 	"openssh" \
 	"openssl" \
