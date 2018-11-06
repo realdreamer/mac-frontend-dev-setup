@@ -43,6 +43,7 @@ brew install ruby
 
 # Install colorls and artii for make your terminal more colorful
 gem install colorls
+gem install lolcat
 gem install artii
 
 # Aliases for list commands with colorful output
@@ -51,4 +52,4 @@ echo "alias ls='ls -G'" >> ˜/.zshrc
 
 # Print a colorful message when the terminal loads using the artii and lolcat Ruby gems
 # You can change the Zsh text from below
-artii Zsh ! --font slant | lolcat
+artii Welcome ! --font slant | lolcat
