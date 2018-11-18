@@ -42,7 +42,6 @@ source gh-ssh-keygen.sh
 
 source terminal.sh
 
-
 e_thanks "Author: Mohamed Ismail -> https://github.com/realdreamer \n"
 
 echo "🍺  Thats all, Done. Note that some of these changes require a logout/restart to take effect."

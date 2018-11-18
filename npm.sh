@@ -4,7 +4,7 @@
 
 for app in "npm" \
 	"yarn" \
-	"yo" \
+	"yo@latest" \
 	"eslint" \
 	"webpack" \
 	"webpack-cli" \

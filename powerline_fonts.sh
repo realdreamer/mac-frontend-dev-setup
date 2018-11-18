@@ -13,4 +13,5 @@ rm -rf fonts
 
 brew tap caskroom/fonts
 brew cask install font-fira-code
+brew cask install font-hack
 brew cask install font-hack-nerd-font

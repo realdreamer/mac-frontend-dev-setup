@@ -25,6 +25,7 @@ brew install zsh-autosuggestions
 cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 
 # Add nerd-font-complete setup in zshrc
+echo "# Load Nerd Fonts with Powerlevel9k theme for Zsh" >> ˜/.zshrc
 echo "POWERLEVEL9K_MODE='nerdfont-complete'" >> ~/.zshrc
 
 # Install powerlevel9k theme for oh-my-zsh
@@ -32,9 +33,12 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 
 # Change theme in .zshrc file ZSH_THEME="powerlevel9k/powerlevel9k"
 
-echo "POWERLEVEL9K_MODE='nerdfont-complete'
-source ~/powerlevel9k/powerlevel9k.zsh-theme
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir vcs newline status)
+echo export "POWERLEVEL9K_MODE='nerdfont-complete'" >> ˜/.zshrc
+echo "source ~/powerlevel9k/powerlevel9k.zsh-theme" >> ˜/.zshrc
+
+echo "# Customise the Powerlevel9k prompts" >> ˜/.zshrc
+
+echo "POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir vcs newline status)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true" >> ˜/.zshrc
 
@@ -42,13 +46,13 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE=true" >> ˜/.zshrc
 brew install ruby
 
 # Install colorls and artii for make your terminal more colorful
-gem install colorls
-gem install lolcat
-gem install artii
+gem install colorls --user-install
+gem install lolcat --user-install
+gem install artii --user-install
 
 # Aliases for list commands with colorful output
-echo "alias lsc='colorls'" >> ˜/.zshrc
-echo "alias ls='ls -G'" >> ˜/.zshrc
+echo "export alias lsc='colorls'" >> ˜/.zshrc
+echo "export alias ls='ls -G'" >> ˜/.zshrc
 
 # Print a colorful message when the terminal loads using the artii and lolcat Ruby gems
 # You can change the Zsh text from below

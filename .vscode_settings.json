@@ -16,7 +16,7 @@
   "editor.detectIndentation": true,
   "editor.wordWrap": "on",
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.fontWeight": "400",
+  "editor.fontWeight": "600", // Retina bold font should not be installed
   "editor.cursorBlinking": "solid",
   "editor.colorDecorators": false,
   "editor.minimap.enabled": false,
